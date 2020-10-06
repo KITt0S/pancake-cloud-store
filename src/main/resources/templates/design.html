@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://thymeleaf.org">
+
+    <head>
+        <title>Pancake Store</title>
+    </head>
+    <body>
+        <h1>Pancake order...</h1>
+        <form method="POST" th:object="${order}">
+
+            <div class="pancake-group" id="pancake">
+                <h3>Choose pancakes</h3>
+                <div th:each="p : ${Pancakes}">
+                    <input name="pancakes" type="checkbox" th:value="${p.id}" />
+                    <span th:text="${p.name}">PANCAKE</span><br/>
+                </div>
+            </div>
+            <div class="sauces-group" id="sauce">
+                <h3>Choose sauces</h3>
+                <div th:each="s : ${Sauces}">
+                    <input name="sauces" type="checkbox" th:value="${s.id}" />
+                    <span th:text="${s.name}">SAUCES</span><br/>
+                </div>
+            </div>
+            <div>
+                <button>Перейти</button>
+            </div>
+        </form>
+    </body>
+</html>

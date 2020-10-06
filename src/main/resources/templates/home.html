@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+
+    <head>
+        <title>Pancake Store</title>
+        <link rel="stylesheet" th:href="@{/styles/home_style.css}">
+    </head>
+    <body>
+        <h1 align="center">Welcome to Pancake Store</h1>
+        <img th:src="@{/images/pancake_logo.png}" alt="Pancake" class="center">
+        <h2 align="center">You can order tasty pancakes</h2>
+        <form method="POST">
+            <div class="button_create">
+                <button align="center">Choose pancakes</button>
+            </div>
+        </form>
+    </body>
+</html>
